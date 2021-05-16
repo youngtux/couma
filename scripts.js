@@ -13,7 +13,7 @@ $("#menu-toggle").click(function (e) {
 // 현재 클릭한 a tag
 function callFunction(obj) {
   console.log($(obj).attr('attr-c'));
-  console.log($(obj).attr('attr-a'));  
+  console.log($(obj).attr('attr-a'));
   var i = parseInt($(obj).attr('attr-a'));
   var j = parseInt($(obj).attr('attr-b'));
   var f_name = $(obj).attr('attr-c');
@@ -26,7 +26,7 @@ function changeCarousel(i,j,f_name) {
   var init= "active"
   for (cnt = i; cnt < j; cnt++) {
       text = text + "<div class="+"'"+"carousel-item "+init+"'"+">";
-      text = text + "<img class="+"'"+"d-block w-100"+"'"+" src="+"'"+"/couma/img/"+f_name+String(cnt)+".PNG"+"'"+" alt="+"'"+"slide "+ String(cnt) +"'"+">";
+      text = text + "<img class="+"'"+"d-block w-100"+"'"+" src="+"'"+"img/"+f_name+String(cnt)+".PNG"+"'"+" alt="+"'"+"slide "+ String(cnt) +"'"+">";
       text = text + "</div>"
       init ="";
   }
