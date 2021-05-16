@@ -25,7 +25,7 @@
 
 </head>
 
-<body  onload="changeCarousel(5,38)">
+<body onload="changeCarousel(5,38,'슬라이드')">
   <div class="d-flex" id="wrapper">
       <!-- Sidebar-->
     <div class="bg-light border-right" id="sidebar-wrapper">
@@ -62,16 +62,35 @@
               </div>
           </nav>
 
-          <!-- 여기서 부터는 페이지 마다 다르게 작성됨  -->
-          <p style="padding:15px; font-size: 1.1rem">
-            코딩은 전문가들이나 공부하는 학생들만 필요할까요?<br><br>
-            4차 산업혁명의 시대에는 코딩도 누구나 알아야 하는 상식이 될 것입니다.<br><br>
-            자! 어려워하지 마시고 한번 도전해 보세요. <br><br>
-            여기 코우마에서 함께해요 ^^
-          </p>
+<!-- 여기서 부터는 페이지 마다 다르게 작성됨  -->
+          <div class="dropdown" style="padding:15px">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              주제선택
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="javascript:void(0);" onclick="callFunction(this);" attr-a="5" attr-b="38" attr-c="슬라이드">전체</a>
+              <a class="dropdown-item" href="javascript:void(0);" onclick="callFunction(this);" attr-a="6" attr-b="12" attr-c="슬라이드">정보의 표현</a>
+              <a class="dropdown-item" href="javascript:void(0);" onclick="callFunction(this);" attr-a="12" attr-b="18" attr-c="슬라이드">컴퓨터 구조</a>
+              <a class="dropdown-item" href="javascript:void(0);" onclick="callFunction(this);" attr-a="18" attr-b="24" attr-c="슬라이드">운영체제</a>
+              <a class="dropdown-item" href="javascript:void(0);" onclick="callFunction(this);" attr-a="24" attr-b="32" attr-c="슬라이드">프로그래밍 언어</a>
+              <a class="dropdown-item" href="javascript:void(0);" onclick="callFunction(this);" attr-a="32" attr-b="38" attr-c="슬라이드">WWW</a>
+            </div>
+          </div>
 
+        <div id="carouselControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner"> </div>
 
-          <!-- 여기 까지는 페이지 마다 다르게 작성됨  -->
+          <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+
+        </div>
+<!-- 여기 까지는 페이지 마다 다르게 작성됨  -->
       </div>
     </div>
   </div>
