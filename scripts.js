@@ -24,9 +24,15 @@ function callFunction(obj) {
 function changeCarousel(i,j,f_name) {
   var text= "";
   var init= "active"
+  var d_name="img/"
+  // 
+  if (f_name==="excel_basic") {
+    d_name="course/excel_basic/"
+    f_name="슬라이드"
+  }
   for (cnt = i; cnt < j; cnt++) {
       text = text + "<div class="+"'"+"carousel-item "+init+"'"+">";
-      text = text + "<img class="+"'"+"d-block w-100"+"'"+" src="+"'"+"img/"+f_name+String(cnt)+".PNG"+"'"+" alt="+"'"+"slide "+ String(cnt) +"'"+">";
+      text = text + "<img class="+"'"+"d-block w-100"+"'"+" src="+"'"+d_name+f_name+String(cnt)+".PNG"+"'"+" alt="+"'"+"slide "+ String(cnt) +"'"+">";
       text = text + "</div>"
       init ="";
   }
